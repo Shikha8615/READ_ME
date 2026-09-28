@@ -1,43 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM Project Documentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM & Business Management System</title>
+<style>
+:root {
+  --bg:#f6f8fa; --card:#ffffff; --text:#24292f; --muted:#57606a;
+  --border:#d0d7de; --code:#f6f8fa; --accent:#0969da;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:Arial, Helvetica, sans-serif; line-height:1.7;
+}
+.container {
+  max-width:1100px; margin:40px auto; padding:45px 55px;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
+h1,h2,h3,h4 { line-height:1.3; margin-top:1.6em; }
+h1 { font-size:32px; border-bottom:1px solid var(--border); padding-bottom:12px; }
+h2 { font-size:25px; border-bottom:1px solid var(--border); padding-bottom:8px; }
+h3 { font-size:20px; }
+a { color:var(--accent); }
+pre {
+  background:var(--code); border:1px solid var(--border);
+  padding:16px; overflow:auto; border-radius:8px;
+}
+code { font-family:Consolas, "Courier New", monospace; }
+table { border-collapse:collapse; width:100%; margin:16px 0; }
+th,td { border:1px solid var(--border); padding:9px 12px; text-align:left; }
+th { font-weight:600; background:var(--code); }
+blockquote { margin:16px 0; padding:8px 16px; border-left:4px solid #8c959f; background:var(--code); }
+img { max-width:100%; height:auto; }
+li { margin:4px 0; }
+@media (max-width:700px) {
+  .container { margin:0; padding:24px 18px; border:0; border-radius:0; }
+  h1 { font-size:27px; }
+}
+</style>
 </head>
-
 <body>
-
-    <h1>CRM Project Documentation</h1>
-
-    <p>Vercel deployment is working successfully.</p>
-
-    <hr>
-
-    <div id="readme">
-        Loading README...
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-    <script>
-        fetch("./README.md")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("README.md not found");
-                }
-                return response.text();
-            })
-            .then(markdown => {
-                document.getElementById("readme").innerHTML =
-                    marked.parse(markdown);
-            })
-            .catch(error => {
-                document.getElementById("readme").innerHTML =
-                    "<h2>README could not be loaded.</h2>";
-                console.error(error);
-            });
-    </script>
-
+<main class="container">
+<p><strong># CRM &amp; Business Management System</strong></p>
+<p>A comprehensive <strong>\*\*CRM and Business Management System\*\</strong>* designed to help organizations manage their customers, leads, projects, tasks, finance, and employees from a centralized platform.</p>
+<p>The application connects different business operations into a single workflow, starting from <strong>\*\*lead management and customer conversion\*\</strong>* and continuing through <strong>\*\*project execution, invoicing, payments, expenses, and HR management\*\</strong>*.</p>
+<p><strong>---</strong></p>
+<p><strong>## 📌 Project Overview</strong></p>
+<p>The CRM &amp; Business Management System provides a centralized platform for managing day-to-day business activities.</p>
+<p>Instead of maintaining separate systems for sales, projects, finance, and HR, the application brings these operations together.</p>
+<p><strong>### Core Business Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>Lead</p>
+<p>↓</p>
+<p>Follow-up</p>
+<p>↓</p>
+<p>Deal</p>
+<p>↓</p>
+<p>Project</p>
+<p>↓</p>
+<p>Tasks</p>
+<p>↓</p>
+<p>Timesheet</p>
+<p>↓</p>
+<p>Estimate</p>
+<p>↓</p>
+<p>Invoice</p>
+<p>↓</p>
+<p>Payment</p>
+<p>↓</p>
+<p>Finance &amp; Reports</p>
+<p>\`\`\`</p>
+<p>At the same time, the HR department can manage:</p>
+<p>\`\`\`text</p>
+<p>Employees</p>
+<p>↓</p>
+<p>Shifts</p>
+<p>↓</p>
+<p>Attendance</p>
+<p>↓</p>
+<p>Leave</p>
+<p>↓</p>
+<p>Payroll</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🚀 Key Features</strong></p>
+<p><strong>## 1. Dashboard</strong></p>
+<p>The dashboard provides a centralized overview of business activities.</p>
+<p><strong>### Features</strong></p>
+<p>\* Total leads</p>
+<p>\* New and converted leads</p>
+<p>\* Active projects</p>
+<p>\* Pending and completed tasks</p>
+<p>\* Invoice summary</p>
+<p>\* Payment summary</p>
+<p>\* Expenses</p>
+<p>\* Employee statistics</p>
+<p>\* Attendance overview</p>
+<p>\* Business reports</p>
+<p><strong>---</strong></p>
+<p><strong>## 2. Lead Management</strong></p>
+<p>The Lead Management module helps the sales team capture and manage potential customers.</p>
+<p><strong>### Features</strong></p>
+<p>\* Create new leads</p>
+<p>\* Update lead information</p>
+<p>\* Assign leads to employees</p>
+<p>\* Track lead status</p>
+<p>\* Add follow-up information</p>
+<p>\* Search and filter leads</p>
+<p>\* Convert qualified leads into deals/customers</p>
+<p>\* Track lost and converted leads</p>
+<p><strong>### Lead Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>New Lead</p>
+<p>↓</p>
+<p>Contacted</p>
+<p>↓</p>
+<p>Interested</p>
+<p>↓</p>
+<p>Follow-up</p>
+<p>↓</p>
+<p>Proposal</p>
+<p>↓</p>
+<p>Negotiation</p>
+<p>↓</p>
+<p>Won / Lost</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 3. Deal Management</strong></p>
+<p>Deals represent business opportunities generated from leads.</p>
+<p><strong>### Features</strong></p>
+<p>\* Create deals</p>
+<p>\* Assign sales employees</p>
+<p>\* Track deal value</p>
+<p>\* Manage deal stages</p>
+<p>\* Add notes and follow-ups</p>
+<p>\* Track won/lost deals</p>
+<p><strong>### Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>Lead</p>
+<p>↓</p>
+<p>Deal</p>
+<p>↓</p>
+<p>Proposal</p>
+<p>↓</p>
+<p>Negotiation</p>
+<p>↓</p>
+<p>Won</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 4. Task Management</strong></p>
+<p>The Task Management module helps employees organize and complete their assigned work.</p>
+<p><strong>### Features</strong></p>
+<p>\* Create tasks</p>
+<p>\* Assign tasks</p>
+<p>\* Set priority</p>
+<p>\* Set deadlines</p>
+<p>\* Add descriptions</p>
+<p>\* Track task status</p>
+<p>\* Monitor completed and pending tasks</p>
+<p><strong>### Task Status</strong></p>
+<p>\`\`\`text</p>
+<p>To Do</p>
+<p>↓</p>
+<p>In Progress</p>
+<p>↓</p>
+<p>Completed</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 5. Project Management</strong></p>
+<p>The Project Management module allows managers to create and monitor projects.</p>
+<p><strong>### Features</strong></p>
+<p>\* Create projects</p>
+<p>\* Add clients</p>
+<p>\* Assign project members</p>
+<p>\* Create project tasks</p>
+<p>\* Set project deadlines</p>
+<p>\* Track project progress</p>
+<p>\* Track time spent</p>
+<p>\* Manage project expenses</p>
+<p>\* Monitor project completion</p>
+<p><strong>### Project Structure</strong></p>
+<p>\`\`\`text</p>
+<p>Project</p>
+<p>│</p>
+<p>├── Requirements</p>
+<p>├── UI/UX</p>
+<p>├── Development</p>
+<p>├── Testing</p>
+<p>├── Deployment</p>
+<p>└── Documentation</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 6. Timesheet Management</strong></p>
+<p>Timesheets help organizations track the amount of time employees spend working on projects and tasks.</p>
+<p><strong>### Features</strong></p>
+<p>\* Record working hours</p>
+<p>\* Track project time</p>
+<p>\* Track task time</p>
+<p>\* View employee working hours</p>
+<p>\* Monitor project effort</p>
+<p>Example:</p>
+<p>\`\`\`text</p>
+<p>Project: E-Commerce Website</p>
+<p>Frontend Development</p>
+<p>Monday    → 5 Hours</p>
+<p>Tuesday   → 6 Hours</p>
+<p>Wednesday → 4 Hours</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 💰 Finance Management</strong></p>
+<p><strong>## 7. Estimates</strong></p>
+<p>The Estimate module allows businesses to create quotations for customers.</p>
+<p><strong>### Features</strong></p>
+<p>\* Create estimates</p>
+<p>\* Add products/services</p>
+<p>\* Set quantities and prices</p>
+<p>\* Calculate totals</p>
+<p>\* Apply taxes</p>
+<p>\* Track estimate status</p>
+<p><strong>### Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>Estimate Created</p>
+<p>↓</p>
+<p>Sent to Customer</p>
+<p>↓</p>
+<p>Accepted / Rejected</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 8. Invoice Management</strong></p>
+<p>Invoices are generated for customers after providing products or services.</p>
+<p><strong>### Features</strong></p>
+<p>\* Create invoices</p>
+<p>\* Add products/services</p>
+<p>\* Calculate taxes</p>
+<p>\* Generate invoice numbers</p>
+<p>\* Track invoice status</p>
+<p>\* Monitor unpaid invoices</p>
+<p>\* Track overdue invoices</p>
+<p><strong>### Invoice Status</strong></p>
+<p>\`\`\`text</p>
+<p>Draft</p>
+<p>↓</p>
+<p>Sent</p>
+<p>↓</p>
+<p>Partially Paid</p>
+<p>↓</p>
+<p>Paid</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 9. Payment Management</strong></p>
+<p>The Payment module tracks payments received from customers.</p>
+<p><strong>### Features</strong></p>
+<p>\* Record payments</p>
+<p>\* Link payments with invoices</p>
+<p>\* Track paid amount</p>
+<p>\* Track pending amount</p>
+<p>\* View payment history</p>
+<p>Example:</p>
+<p>\`\`\`text</p>
+<p>Invoice Amount : ₹1,00,000</p>
+<p>Paid Amount    : ₹70,000</p>
+<p>Pending Amount : ₹30,000</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 10. Expense Management</strong></p>
+<p>The Expense module records business and project-related expenses.</p>
+<p><strong>### Examples</strong></p>
+<p>\* Office expenses</p>
+<p>\* Travel expenses</p>
+<p>\* Software expenses</p>
+<p>\* Hosting expenses</p>
+<p>\* Project expenses</p>
+<p>\* Other operational expenses</p>
+<p><strong>### Basic Calculation</strong></p>
+<p>\`\`\`text</p>
+<p>Revenue</p>
+<p>-</p>
+<p>Expenses</p>
+<p>=</p>
+<p>Profit</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 👨‍💼 HR Management</strong></p>
+<p><strong>## 11. Employee Management</strong></p>
+<p>The Employee module stores employee information.</p>
+<p><strong>### Features</strong></p>
+<p>\* Employee profiles</p>
+<p>\* Employee ID</p>
+<p>\* Department</p>
+<p>\* Designation</p>
+<p>\* Joining date</p>
+<p>\* Contact information</p>
+<p>\* Employment information</p>
+<p><strong>---</strong></p>
+<p><strong>## 12. Attendance Management</strong></p>
+<p>The Attendance module tracks employee attendance.</p>
+<p><strong>### Features</strong></p>
+<p>\* Check-in</p>
+<p>\* Check-out</p>
+<p>\* Present/Absent status</p>
+<p>\* Working hours</p>
+<p>\* Attendance history</p>
+<p>Example:</p>
+<p>\`\`\`text</p>
+<p>Employee: Shikha</p>
+<p>Date       Check-in    Check-out    Status</p>
+<p>\------------------------------------------------</p>
+<p>28 Sep     09:10 AM    06:05 PM    Present</p>
+<p>29 Sep     09:05 AM    06:00 PM    Present</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 13. Leave Management</strong></p>
+<p>Employees can submit leave requests and managers/HR can approve or reject them.</p>
+<p><strong>### Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>Employee</p>
+<p>↓</p>
+<p>Leave Request</p>
+<p>↓</p>
+<p>Manager / HR</p>
+<p>↓</p>
+<p>Approve / Reject</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 14. Shift Management</strong></p>
+<p>HR can define and assign employee work shifts.</p>
+<p>Example:</p>
+<p>\`\`\`text</p>
+<p>Morning Shift</p>
+<p>09:00 AM – 06:00 PM</p>
+<p>Evening Shift</p>
+<p>02:00 PM – 11:00 PM</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 15. Payroll Management</strong></p>
+<p>The Payroll module helps calculate and manage employee salaries.</p>
+<p><strong>### Payroll can consider</strong></p>
+<p>\* Basic salary</p>
+<p>\* Allowances</p>
+<p>\* Attendance</p>
+<p>\* Leave</p>
+<p>\* Deductions</p>
+<p>\* Net salary</p>
+<p><strong>### Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>Employee</p>
+<p>↓</p>
+<p>Salary Structure</p>
+<p>↓</p>
+<p>Attendance &amp; Leave</p>
+<p>↓</p>
+<p>Deductions</p>
+<p>↓</p>
+<p>Payroll Calculation</p>
+<p>↓</p>
+<p>Net Salary</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🔐 Authentication &amp; Authorization</strong></p>
+<p>The system should provide secure authentication and role-based access.</p>
+<p><strong>### Example Roles</strong></p>
+<p>\`\`\`text</p>
+<p>Admin</p>
+<p>├── Full System Access</p>
+<p>│</p>
+<p>Manager</p>
+<p>├── Projects</p>
+<p>├── Tasks</p>
+<p>├── Leads</p>
+<p>│</p>
+<p>Sales Employee</p>
+<p>├── Leads</p>
+<p>└── Deals</p>
+<p>│</p>
+<p>HR</p>
+<p>├── Employees</p>
+<p>├── Attendance</p>
+<p>├── Leave</p>
+<p>└── Payroll</p>
+<p>│</p>
+<p>Employee</p>
+<p>├── Assigned Tasks</p>
+<p>├── Projects</p>
+<p>├── Timesheet</p>
+<p>└── Leave Requests</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🏗️ System Architecture</strong></p>
+<p>A typical architecture for this type of application is:</p>
+<p>\`\`\`text</p>
+<p>User</p>
+<p>│</p>
+<p>↓</p>
+<p>Web Application</p>
+<p>│</p>
+<p>┌────────┴────────┐</p>
+<p>↓                 ↓</p>
+<p>Frontend          Backend</p>
+<p>│                 │</p>
+<p>│                 ↓</p>
+<p>│            Business Logic</p>
+<p>│                 │</p>
+<p>│                 ↓</p>
+<p>└────────────── Database</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🛠️ Technology Stack</strong></p>
+<p>The exact technology stack depends on the implementation.</p>
+<p>A PHP-based implementation can use:</p>
+<p><strong>### Frontend</strong></p>
+<p>\* HTML5</p>
+<p>\* CSS3</p>
+<p>\* JavaScript</p>
+<p>\* Bootstrap</p>
+<p>\* AJAX</p>
+<p><strong>### Backend</strong></p>
+<p>\* PHP</p>
+<p>\* Laravel / PHP MVC architecture</p>
+<p><strong>### Database</strong></p>
+<p>\* MySQL</p>
+<p><strong>### Development Tools</strong></p>
+<p>\* Git</p>
+<p>\* GitHub</p>
+<p>\* VS Code</p>
+<p>\* XAMPP / WAMP</p>
+<p>\* Composer</p>
+<p><strong>---</strong></p>
+<p><strong># 💻 System Requirements</strong></p>
+<p>Before installing the application, make sure the following are installed:</p>
+<p>\* PHP 8.x</p>
+<p>\* MySQL 8.x / MariaDB</p>
+<p>\* Apache</p>
+<p>\* Composer</p>
+<p>\* Git</p>
+<p>\* Node.js &amp; npm</p>
+<p>\* VS Code</p>
+<p>\* XAMPP or WAMP</p>
+<p>Check versions:</p>
+<p>\`\`\`bash</p>
+<p>php -v</p>
+<p>composer -V</p>
+<p>mysql --version</p>
+<p>node -v</p>
+<p>npm -v</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># ⚙️ Installation &amp; Setup</strong></p>
+<p><strong>## 1. Clone the Repository</strong></p>
+<p>\`\`\`bash</p>
+<p>git clone https\://github.com/your-username/crm-business-management.git</p>
+<p>\`\`\`</p>
+<p>Move into the project directory:</p>
+<p>\`\`\`bash</p>
+<p>cd crm-business-management</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 2. Install PHP Dependencies</strong></p>
+<p>\`\`\`bash</p>
+<p>composer install</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 3. Configure Environment</strong></p>
+<p>Copy \`.env.example\` to \`.env\`.</p>
+<p>On Windows, you can simply copy the file manually and rename it to:</p>
+<p>\`\`\`text</p>
+<p>.env</p>
+<p>\`\`\`</p>
+<p>Configure the database:</p>
+<p>\`\`\`env</p>
+<p>APP_NAME=&quot;CRM Business Management&quot;</p>
+<p>APP_ENV=local</p>
+<p>APP_DEBUG=true</p>
+<p>APP_URL=http\://localhost</p>
+<p>DB_CONNECTION=mysql</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>DB_PORT=3306</p>
+<p>DB_DATABASE=crm_database</p>
+<p>DB_USERNAME=root</p>
+<p>DB_PASSWORD=</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 4. Generate Application Key</strong></p>
+<p>For Laravel:</p>
+<p>\`\`\`bash</p>
+<p>php artisan key\:generate</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 5. Create Database</strong></p>
+<p>Open <strong>\*\*phpMyAdmin\*\</strong>* or MySQL and create:</p>
+<p>\`\`\`sql</p>
+<p>CREATE DATABASE crm_database;</p>
+<p>\`\`\`</p>
+<p>Make sure the database name matches the \`.env\` configuration.</p>
+<p><strong>---</strong></p>
+<p><strong>## 6. Run Migrations</strong></p>
+<p>\`\`\`bash</p>
+<p>php artisan migrate</p>
+<p>\`\`\`</p>
+<p>If seeders are available:</p>
+<p>\`\`\`bash</p>
+<p>php artisan migrate --seed</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 7. Install Frontend Dependencies</strong></p>
+<p>\`\`\`bash</p>
+<p>npm install</p>
+<p>\`\`\`</p>
+<p>For development:</p>
+<p>\`\`\`bash</p>
+<p>npm run dev</p>
+<p>\`\`\`</p>
+<p>For production:</p>
+<p>\`\`\`bash</p>
+<p>npm run build</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 8. Configure Storage</strong></p>
+<p>If the application uses Laravel storage:</p>
+<p>\`\`\`bash</p>
+<p>php artisan storage\:link</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## 9. Start the Application</strong></p>
+<p>\`\`\`bash</p>
+<p>php artisan serve</p>
+<p>\`\`\`</p>
+<p>Open:</p>
+<p>\`\`\`text</p>
+<p>http\://localhost:8000</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 📂 Suggested Project Structure</strong></p>
+<p>\`\`\`text</p>
+<p>crm-business-management/</p>
+<p>│</p>
+<p>├── app/</p>
+<p>│   ├── Http/</p>
+<p>│   │   ├── Controllers/</p>
+<p>│   │   └── Requests/</p>
+<p>│   ├── Models/</p>
+<p>│   └── Services/</p>
+<p>│</p>
+<p>├── database/</p>
+<p>│   ├── migrations/</p>
+<p>│   └── seeders/</p>
+<p>│</p>
+<p>├── resources/</p>
+<p>│   ├── views/</p>
+<p>│   ├── css/</p>
+<p>│   └── js/</p>
+<p>│</p>
+<p>├── routes/</p>
+<p>│   ├── web.php</p>
+<p>│   └── api.php</p>
+<p>│</p>
+<p>├── public/</p>
+<p>├── storage/</p>
+<p>├── tests/</p>
+<p>│</p>
+<p>├── .env.example</p>
+<p>├── composer.json</p>
+<p>├── package.json</p>
+<p>└── README.md</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🗄️ Database Modules</strong></p>
+<p>A relational database can contain tables such as:</p>
+<p>\`\`\`text</p>
+<p>users</p>
+<p>employees</p>
+<p>departments</p>
+<p>roles</p>
+<p>permissions</p>
+<p>leads</p>
+<p>lead_followups</p>
+<p>deals</p>
+<p>clients</p>
+<p>projects</p>
+<p>project_members</p>
+<p>tasks</p>
+<p>task_comments</p>
+<p>timesheets</p>
+<p>estimates</p>
+<p>estimate_items</p>
+<p>invoices</p>
+<p>invoice_items</p>
+<p>payments</p>
+<p>expenses</p>
+<p>attendance</p>
+<p>leave_requests</p>
+<p>shifts</p>
+<p>payroll</p>
+<p>\`\`\`</p>
+<p>The exact database structure depends on the implementation.</p>
+<p><strong>---</strong></p>
+<p><strong># 🧭 Usage Guide</strong></p>
+<p><strong>## Dashboard</strong></p>
+<p>After login, the dashboard provides an overview of:</p>
+<p>\* Leads</p>
+<p>\* Deals</p>
+<p>\* Projects</p>
+<p>\* Tasks</p>
+<p>\* Invoices</p>
+<p>\* Payments</p>
+<p>\* Expenses</p>
+<p>\* Employees</p>
+<p>\* Attendance</p>
+<p>\* Reports</p>
+<p><strong>---</strong></p>
+<p><strong>## Lead Management</strong></p>
+<p>Navigate to:</p>
+<p>\`\`\`text</p>
+<p>CRM → Leads</p>
+<p>\`\`\`</p>
+<p>Create a new lead and enter:</p>
+<p>\`\`\`text</p>
+<p>Name</p>
+<p>Company</p>
+<p>Email</p>
+<p>Phone</p>
+<p>Lead Source</p>
+<p>Assigned Employee</p>
+<p>Status</p>
+<p>Notes</p>
+<p>\`\`\`</p>
+<p>Track the lead from:</p>
+<p>\`\`\`text</p>
+<p>New → Contacted → Interested → Proposal → Negotiation → Won/Lost</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## Project Management</strong></p>
+<p>Create a project and add:</p>
+<p>\`\`\`text</p>
+<p>Project Name</p>
+<p>Client</p>
+<p>Start Date</p>
+<p>End Date</p>
+<p>Project Members</p>
+<p>Description</p>
+<p>\`\`\`</p>
+<p>Then create and assign project tasks.</p>
+<p><strong>---</strong></p>
+<p><strong>## Finance</strong></p>
+<p>The finance workflow is:</p>
+<p>\`\`\`text</p>
+<p>Estimate</p>
+<p>↓</p>
+<p>Invoice</p>
+<p>↓</p>
+<p>Payment</p>
+<p>↓</p>
+<p>Expense Tracking</p>
+<p>↓</p>
+<p>Financial Reports</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong>## HR</strong></p>
+<p>The HR workflow is:</p>
+<p>\`\`\`text</p>
+<p>Employee</p>
+<p>↓</p>
+<p>Shift</p>
+<p>↓</p>
+<p>Attendance</p>
+<p>↓</p>
+<p>Leave</p>
+<p>↓</p>
+<p>Payroll</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🔄 Complete Business Workflow</strong></p>
+<p>\`\`\`text</p>
+<p>DASHBOARD</p>
+<p>│</p>
+<p>┌──────────────┼──────────────┐</p>
+<p>↓              ↓              ↓</p>
+<p>LEADS         PROJECTS        FINANCE</p>
+<p>│              │              │</p>
+<p>↓              ↓              ↓</p>
+<p>DEALS          TASKS         ESTIMATES</p>
+<p>│              │              │</p>
+<p>↓              ↓              ↓</p>
+<p>CLIENT        TIMESHEET       INVOICES</p>
+<p>│              │</p>
+<p>↓              ↓</p>
+<p>EXPENSES        PAYMENTS</p>
+<p>│</p>
+<p>↓</p>
+<p>REPORTS</p>
+<p>HR MODULE</p>
+<p>│</p>
+<p>↓</p>
+<p>EMPLOYEES</p>
+<p>│</p>
+<p>┌──────────┼──────────┐</p>
+<p>↓          ↓          ↓</p>
+<p>SHIFTS     ATTENDANCE   LEAVE</p>
+<p>│</p>
+<p>↓</p>
+<p>PAYROLL</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 📊 Example Use Case</strong></p>
+<p><strong>### Scenario: Website Development Company</strong></p>
+<p>A customer contacts the company for an e-commerce website.</p>
+<p>1\. Sales employee creates a <strong>\*\*Lead\*\</strong>*.</p>
+<p>2\. Salesperson follows up with the customer.</p>
+<p>3\. Lead becomes a <strong>\*\*Deal\*\</strong>*.</p>
+<p>4\. After confirmation, a <strong>\*\*Project\*\</strong>* is created.</p>
+<p>5\. Project manager creates multiple <strong>\*\*Tasks\*\</strong>*.</p>
+<p>6\. Tasks are assigned to developers and designers.</p>
+<p>7\. Employees record working hours using <strong>\*\*Timesheets\*\</strong>*.</p>
+<p>8\. Company creates an <strong>\*\*Estimate\*\</strong>*.</p>
+<p>9\. After approval, an <strong>\*\*Invoice\*\</strong>* is generated.</p>
+<p>10\. Customer makes a <strong>\*\*Payment\*\</strong>*.</p>
+<p>11\. Project-related <strong>\*\*Expenses\*\</strong>* are recorded.</p>
+<p>12\. Management monitors the complete process through <strong>\*\*Dashboard and Reports\*\</strong>*.</p>
+<p><strong>---</strong></p>
+<p><strong># 🔐 Security</strong></p>
+<p>A production-ready implementation should include:</p>
+<p>\* Secure authentication</p>
+<p>\* Password hashing</p>
+<p>\* Role-based access control</p>
+<p>\* Input validation</p>
+<p>\* SQL injection protection</p>
+<p>\* CSRF protection</p>
+<p>\* Session management</p>
+<p>\* Secure file uploads</p>
+<p>\* Authorization checks</p>
+<p>\* Audit logging</p>
+<p><strong>---</strong></p>
+<p><strong># 🧪 Testing</strong></p>
+<p>If automated tests are configured:</p>
+<p>\`\`\`bash</p>
+<p>php artisan test</p>
+<p>\`\`\`</p>
+<p>or:</p>
+<p>\`\`\`bash</p>
+<p>./vendor/bin/phpunit</p>
+<p>\`\`\`</p>
+<p><strong>---</strong></p>
+<p><strong># 🐛 Troubleshooting</strong></p>
+<p><strong>### Database Connection Error</strong></p>
+<p>Check your \`.env\`:</p>
+<p>\`\`\`env</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>DB_PORT=3306</p>
+<p>DB_DATABASE=crm_database</p>
+<p>DB_USERNAME=root</p>
+<p>DB_PASSWORD=</p>
+<p>\`\`\`</p>
+<p>Then run:</p>
+<p>\`\`\`bash</p>
+<p>php artisan config\:clear</p>
+<p>\`\`\`</p>
+<p><strong>### Application Key Error</strong></p>
+<p>\`\`\`bash</p>
+<p>php artisan key\:generate</p>
+<p>\`\`\`</p>
+<p><strong>### Cache Issues</strong></p>
+<p>\`\`\`bash</p>
+<p>php artisan optimize\:clear</p>
+<p>\`\`\`</p>
+<p><strong>### Storage Issues</strong></p>
+<p>\`\`\`bash</p>
+<p>php artisan storage\:link</p>
+<p>\`\`\`</p>
+<p><strong>### Migration Issues</strong></p>
+<p>For development/testing only:</p>
+<p>\`\`\`bash</p>
+<p>php artisan migrate\:fresh --seed</p>
+<p>\`\`\`</p>
+<p>\&gt; <strong>\*\*Warning:\*\</strong>* This command deletes existing database tables and data.</p>
+<p><strong>---</strong></p>
+<p><strong># 🚀 Production Deployment</strong></p>
+<p>Before production deployment:</p>
+<p>\`\`\`bash</p>
+<p>composer install --no-dev --optimize-autoloader</p>
+<p>npm install</p>
+<p>npm run build</p>
+<p>\`\`\`</p>
+<p>Configure:</p>
+<p>\`\`\`env</p>
+<p>APP_ENV=production</p>
+<p>APP_DEBUG=false</p>
+<p>\`\`\`</p>
+<p>Then:</p>
+<p>\`\`\`bash</p>
+<p>php artisan optimize</p>
+<p>\`\`\`</p>
+<p>Production should also have:</p>
+<p>\* HTTPS/SSL</p>
+<p>\* Database backups</p>
+<p>\* Secure environment variables</p>
+<p>\* Proper file permissions</p>
+<p>\* Queue workers where required</p>
+<p>\* Scheduled jobs where required</p>
+<p><strong>\*\*Never commit \`.env\` or production credentials to GitHub.\*\</strong>*</p>
+<p><strong>---</strong></p>
+<p><strong># 🎯 Project Objectives</strong></p>
+<p>\* Centralize business operations</p>
+<p>\* Improve lead management</p>
+<p>\* Track customer relationships</p>
+<p>\* Manage projects and tasks</p>
+<p>\* Monitor employee productivity</p>
+<p>\* Automate invoicing and payments</p>
+<p>\* Track expenses</p>
+<p>\* Manage employee attendance and leave</p>
+<p>\* Simplify payroll management</p>
+<p>\* Provide centralized business reporting</p>
+<p><strong>---</strong></p>
+<p><strong># 📈 Future Enhancements</strong></p>
+<p>\* Mobile application</p>
+<p>\* WhatsApp integration</p>
+<p>\* Email automation</p>
+<p>\* Payment gateway integration</p>
+<p>\* Advanced analytics</p>
+<p>\* AI-based lead scoring</p>
+<p>\* AI chatbot</p>
+<p>\* Automated invoice reminders</p>
+<p>\* Advanced employee analytics</p>
+<p>\* Calendar integration</p>
+<p>\* REST API</p>
+<p>\* Third-party accounting integrations</p>
+<p><strong>---</strong></p>
+<p><strong># 👩‍💻 Developer Learning Areas</strong></p>
+<p>This project provides practical experience in:</p>
+<p>\* PHP</p>
+<p>\* MVC architecture</p>
+<p>\* MySQL</p>
+<p>\* CRUD operations</p>
+<p>\* Authentication</p>
+<p>\* Authorization</p>
+<p>\* Role-based access control</p>
+<p>\* REST APIs</p>
+<p>\* AJAX</p>
+<p>\* Form validation</p>
+<p>\* Database relationships</p>
+<p>\* SQL joins and queries</p>
+<p>\* File handling</p>
+<p>\* Invoice generation</p>
+<p>\* Dashboard development</p>
+<p>\* Reporting</p>
+<p>\* Git &amp; GitHub</p>
+<p><strong>---</strong></p>
+<p><strong># 📄 License</strong></p>
+<p>This project is intended for educational and development purposes.</p>
+<p>If this repository is based on or integrates with an existing commercial product, the original product&#x27;s name, branding, source code, and proprietary assets remain subject to their respective rights and licenses.</p>
+</main>
 </body>
 </html>
