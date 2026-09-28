@@ -39,6 +39,105 @@ li { margin:4px 0; }
   .container { margin:0; padding:24px 18px; border:0; border-radius:0; }
   h1 { font-size:27px; }
 }
+
+/* Modern system architecture diagram */
+.architecture-diagram {
+  margin: 28px 0 36px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  overflow-x: auto;
+}
+.arch-flow {
+  min-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.arch-node {
+  width: min(420px, 88%);
+  padding: 16px 22px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, .07);
+  text-align: center;
+  font-weight: 700;
+  color: #111827;
+}
+.arch-node.user { border-color: #c7d2fe; }
+.arch-node.app { border-color: #93c5fd; }
+.arch-node.frontend { border-color: #a7f3d0; }
+.arch-node.backend { border-color: #fde68a; }
+.arch-node.logic { border-color: #fbcfe8; }
+.arch-node.database { border-color: #c4b5fd; }
+
+.arch-arrow {
+  position: relative;
+  height: 42px;
+  width: 2px;
+  background: #94a3b8;
+}
+.arch-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid #64748b;
+}
+.arch-branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  width: min(620px, 96%);
+  position: relative;
+}
+.arch-branches::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: #94a3b8;
+}
+.arch-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+}
+.arch-branch .arch-arrow {
+  height: 28px;
+}
+.arch-label {
+  margin: 8px 0 0;
+  font-size: .86rem;
+  color: #64748b;
+  font-weight: 600;
+}
+.arch-backend-chain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arch-caption {
+  margin-top: 18px;
+  text-align: center;
+  color: #64748b;
+  font-size: .92rem;
+}
+@media (max-width: 700px) {
+  .architecture-diagram { padding: 16px; }
+  .arch-flow { min-width: 520px; }
+  .arch-branches { gap: 30px; }
+}
+
 </style>
 </head>
 <body>
@@ -388,24 +487,44 @@ li { margin:4px 0; }
 <p>└── Leave Requests</p>
 <p>\`\`\`</p>
 <p><strong>---</strong></p>
-<p><strong># 🏗️ System Architecture</strong></p>
+
+<h1>🏗️ System Architecture</h1>
 <p>A typical architecture for this type of application is:</p>
-<p>\`\`\`text</p>
-<p>User</p>
-<p>│</p>
-<p>↓</p>
-<p>Web Application</p>
-<p>│</p>
-<p>┌────────┴────────┐</p>
-<p>↓                 ↓</p>
-<p>Frontend          Backend</p>
-<p>│                 │</p>
-<p>│                 ↓</p>
-<p>│            Business Logic</p>
-<p>│                 │</p>
-<p>│                 ↓</p>
-<p>└────────────── Database</p>
-<p>\`\`\`</p>
+
+<div class="architecture-diagram">
+  <div class="arch-flow">
+
+    <div class="arch-node user">👤 User</div>
+    <div class="arch-arrow"></div>
+
+    <div class="arch-node app">🌐 Web Application</div>
+
+    <div class="arch-branches">
+      <div class="arch-branch">
+        <div class="arch-arrow"></div>
+        <div class="arch-node frontend">🎨 Frontend</div>
+        <div class="arch-label">User interface &amp; client-side interaction</div>
+      </div>
+
+      <div class="arch-branch">
+        <div class="arch-arrow"></div>
+        <div class="arch-node backend">⚙️ Backend</div>
+
+        <div class="arch-backend-chain">
+          <div class="arch-arrow"></div>
+          <div class="arch-node logic">🧠 Business Logic</div>
+          <div class="arch-arrow"></div>
+          <div class="arch-node database">🗄️ Database</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arch-caption">
+      The frontend handles the user interface, while the backend processes business logic and communicates with the database.
+    </div>
+  </div>
+</div>
+
 <p><strong>---</strong></p>
 <p><strong># 🛠️ Technology Stack</strong></p>
 <p>The exact technology stack depends on the implementation.</p>
