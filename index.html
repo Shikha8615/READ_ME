@@ -3,69 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>CRM Project Documentation</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-            line-height: 1.7;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        pre {
-            background: #f4f4f4;
-            padding: 15px;
-            overflow-x: auto;
-            border-radius: 8px;
-        }
-
-        code {
-            font-family: Consolas, monospace;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-
-        blockquote {
-            border-left: 4px solid #888;
-            padding-left: 15px;
-        }
-    </style>
 </head>
 
 <body>
 
-<div id="readme">Loading README...</div>
+    <h1>CRM Project Documentation</h1>
 
-<script>
-    fetch("README.md")
-        .then(response => response.text())
-        .then(markdown => {
-            document.getElementById("readme").innerHTML =
-                marked.parse(markdown);
-        })
-        .catch(error => {
-            document.getElementById("readme").innerHTML =
-                "<h2>README could not be loaded.</h2>";
-            console.error(error);
-        });
-</script>
+    <p>Vercel deployment is working successfully.</p>
+
+    <hr>
+
+    <div id="readme">
+        Loading README...
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        fetch("./README.md")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("README.md not found");
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById("readme").innerHTML =
+                    marked.parse(markdown);
+            })
+            .catch(error => {
+                document.getElementById("readme").innerHTML =
+                    "<h2>README could not be loaded.</h2>";
+                console.error(error);
+            });
+    </script>
 
 </body>
 </html>
